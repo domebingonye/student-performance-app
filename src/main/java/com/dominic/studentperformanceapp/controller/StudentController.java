@@ -14,6 +14,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequiredArgsConstructor
@@ -57,6 +59,12 @@ public class StudentController {
     @GetMapping("/score/mean")
     public ResponseEntity<Double> meanScore(StudentScoreSearchRequest request) {
         return ResponseEntity.ok().body(studentScoreDaoService.meanScore(request));
+    }
+
+    @Operation(summary = "Mode score for each student")
+    @GetMapping("/score/mode")
+    public ResponseEntity<List<Double>> modelScore(StudentScoreSearchRequest request) {
+        return ResponseEntity.ok().body(studentScoreDaoService.modelScore(request));
     }
 
 }

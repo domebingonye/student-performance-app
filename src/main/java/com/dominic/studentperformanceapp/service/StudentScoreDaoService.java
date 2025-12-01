@@ -19,12 +19,11 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 @Service
 @Slf4j
@@ -112,5 +111,33 @@ public class StudentScoreDaoService {
     public Double meanScore(StudentScoreSearchRequest request){
         List<StudentScoreResponse> studentScoreResponseList = getAllStudentScore(request);
         return studentScoreResponseList.stream().mapToDouble(StudentScoreResponse::getScore).average().orElse(0.0);
+    }
+
+    public List<Double> modelScore(StudentScoreSearchRequest request){
+        List<StudentScoreResponse> studentScoreResponseList = getAllStudentScore(request);
+        List<Double> scores = studentScoreResponseList.stream().map(StudentScoreResponse::getScore).sorted().toList();
+        if(CollectionUtils.isEmpty(scores)){
+            return Collections.emptyList();
+        }
+        Map<Double, Integer> map = new HashMap<>();
+        for (Double s : scores) {
+            map.put(s, map.getOrDefault(s, 0) + 1);
+        }
+
+        int max = map.values().stream().max(Integer::compareTo).orElse(0);
+
+        List<Double> modeScores = new ArrayList<>();
+        for(Map.Entry<Double, Integer> entry : map.entrySet()){
+            if(entry.getValue() == max){
+                modeScores.add(entry.getKey());
+            }
+        }
+
+        if(CollectionUtils.isEmpty(modeScores)){
+            return scores;
+        }
+
+        return modeScores;
+
     }
 }
