@@ -1,4 +1,4 @@
-package com.dominic.studentperformanceapp.service;
+package com.dominic.studentperformanceapp.service.student;
 
 import com.dominic.studentperformanceapp.domain.student.StudentDetails;
 import com.dominic.studentperformanceapp.interfaces.Id;

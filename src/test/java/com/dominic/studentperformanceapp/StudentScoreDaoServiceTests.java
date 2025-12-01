@@ -2,7 +2,7 @@ package com.dominic.studentperformanceapp;
 
 import com.dominic.studentperformanceapp.domain.student.StudentScore;
 import com.dominic.studentperformanceapp.enums.Subjects;
-import com.dominic.studentperformanceapp.service.StudentScoreDaoService;
+import com.dominic.studentperformanceapp.service.student.StudentScoreDaoService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

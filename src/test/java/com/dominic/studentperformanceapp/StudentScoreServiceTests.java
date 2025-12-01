@@ -2,10 +2,9 @@ package com.dominic.studentperformanceapp;
 
 import com.dominic.studentperformanceapp.domain.student.StudentScore;
 import com.dominic.studentperformanceapp.enums.Subjects;
-import com.dominic.studentperformanceapp.service.StudentScoreService;
+import com.dominic.studentperformanceapp.service.student.StudentScoreService;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.internal.runners.JUnit4ClassRunner;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
