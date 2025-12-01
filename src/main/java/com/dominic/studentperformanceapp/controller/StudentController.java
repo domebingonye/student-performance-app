@@ -67,4 +67,10 @@ public class StudentController {
         return ResponseEntity.ok().body(studentScoreDaoService.modelScore(request));
     }
 
+    @Operation(summary = "Median score for each student")
+    @GetMapping("/score/media")
+    public ResponseEntity<Double> medianScore(StudentScoreSearchRequest request) {
+        return ResponseEntity.ok().body(studentScoreDaoService.medianScore(request));
+    }
+
 }

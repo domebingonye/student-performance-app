@@ -115,7 +115,7 @@ public class StudentScoreDaoService {
 
     public List<Double> modelScore(StudentScoreSearchRequest request){
         List<StudentScoreResponse> studentScoreResponseList = getAllStudentScore(request);
-        List<Double> scores = studentScoreResponseList.stream().map(StudentScoreResponse::getScore).sorted().toList();
+        List<Double> scores = studentScoreResponseList.stream().map(StudentScoreResponse::getScore).toList();
         if(CollectionUtils.isEmpty(scores)){
             return Collections.emptyList();
         }
@@ -138,6 +138,19 @@ public class StudentScoreDaoService {
         }
 
         return modeScores;
+    }
 
+    public Double medianScore(StudentScoreSearchRequest request){
+        List<StudentScoreResponse> studentScoreResponseList = getAllStudentScore(request);
+        List<Double> scores = studentScoreResponseList.stream().map(StudentScoreResponse::getScore).sorted().toList();
+        if(CollectionUtils.isEmpty(scores)){
+            return 0.0;
+        }
+        int median = scores.size() / 2;
+
+        if (scores.size() % 2 != 0) {
+            return scores.get(median);
+        }
+        return (scores.get(median - 1) + scores.get(median)) / 2.0;
     }
 }
