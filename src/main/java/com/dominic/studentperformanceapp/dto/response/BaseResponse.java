@@ -1,4 +1,4 @@
-package com.dominic.studentperformanceapp.domain.response;
+package com.dominic.studentperformanceapp.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

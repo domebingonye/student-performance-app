@@ -1,6 +1,6 @@
 package com.dominic.studentperformanceapp.exception;
 
-import com.dominic.studentperformanceapp.domain.response.BaseResponse;
+import com.dominic.studentperformanceapp.dto.response.BaseResponse;
 import com.dominic.studentperformanceapp.enums.ResponseCodes;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;

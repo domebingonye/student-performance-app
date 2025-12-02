@@ -1,9 +1,9 @@
 package com.dominic.studentperformanceapp.controller;
 
-import com.dominic.studentperformanceapp.domain.student.StudentDetails;
-import com.dominic.studentperformanceapp.domain.student.StudentScore;
-import com.dominic.studentperformanceapp.domain.student.StudentScoreResponse;
-import com.dominic.studentperformanceapp.domain.student.StudentScoreSearchRequest;
+import com.dominic.studentperformanceapp.dto.student.StudentDetails;
+import com.dominic.studentperformanceapp.dto.student.StudentScore;
+import com.dominic.studentperformanceapp.dto.student.StudentScoreResponse;
+import com.dominic.studentperformanceapp.dto.student.StudentScoreSearchRequest;
 import com.dominic.studentperformanceapp.service.student.StudentDetailDaoService;
 import com.dominic.studentperformanceapp.service.student.StudentScoreDaoService;
 import com.dominic.studentperformanceapp.service.student.StudentScoreService;

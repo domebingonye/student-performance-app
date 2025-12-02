@@ -1,6 +1,6 @@
 package com.dominic.studentperformanceapp;
 
-import com.dominic.studentperformanceapp.domain.student.StudentScore;
+import com.dominic.studentperformanceapp.dto.student.StudentScore;
 import com.dominic.studentperformanceapp.enums.Subjects;
 import com.dominic.studentperformanceapp.service.student.StudentScoreDaoService;
 import org.junit.Assert;

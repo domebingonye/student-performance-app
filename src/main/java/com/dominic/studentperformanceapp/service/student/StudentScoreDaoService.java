@@ -1,8 +1,8 @@
 package com.dominic.studentperformanceapp.service.student;
 
-import com.dominic.studentperformanceapp.domain.student.StudentScore;
-import com.dominic.studentperformanceapp.domain.student.StudentScoreResponse;
-import com.dominic.studentperformanceapp.domain.student.StudentScoreSearchRequest;
+import com.dominic.studentperformanceapp.dto.student.StudentScore;
+import com.dominic.studentperformanceapp.dto.student.StudentScoreResponse;
+import com.dominic.studentperformanceapp.dto.student.StudentScoreSearchRequest;
 import com.dominic.studentperformanceapp.enums.Grade;
 import com.dominic.studentperformanceapp.model.StudentScoreEntity;
 import com.dominic.studentperformanceapp.predicate.PredicateTools;

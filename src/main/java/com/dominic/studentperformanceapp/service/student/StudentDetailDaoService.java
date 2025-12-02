@@ -1,6 +1,6 @@
 package com.dominic.studentperformanceapp.service.student;
 
-import com.dominic.studentperformanceapp.domain.student.StudentDetails;
+import com.dominic.studentperformanceapp.dto.student.StudentDetails;
 import com.dominic.studentperformanceapp.interfaces.Id;
 import com.dominic.studentperformanceapp.model.StudentDetailsEntity;
 import com.dominic.studentperformanceapp.repository.StudentDetailsRepository;

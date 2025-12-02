@@ -1,4 +1,4 @@
-package com.dominic.studentperformanceapp.domain.request;
+package com.dominic.studentperformanceapp.dto.request;
 
 import lombok.Data;
 import org.springframework.data.domain.Sort;

@@ -1,4 +1,4 @@
-package com.dominic.studentperformanceapp.domain.student;
+package com.dominic.studentperformanceapp.dto.student;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;

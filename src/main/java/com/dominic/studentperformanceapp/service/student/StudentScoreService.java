@@ -1,6 +1,6 @@
 package com.dominic.studentperformanceapp.service.student;
 
-import com.dominic.studentperformanceapp.domain.student.StudentScore;
+import com.dominic.studentperformanceapp.dto.student.StudentScore;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

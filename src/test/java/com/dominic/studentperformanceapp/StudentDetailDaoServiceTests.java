@@ -1,6 +1,6 @@
 package com.dominic.studentperformanceapp;
 
-import com.dominic.studentperformanceapp.domain.student.StudentDetails;
+import com.dominic.studentperformanceapp.dto.student.StudentDetails;
 import com.dominic.studentperformanceapp.service.student.StudentDetailDaoService;
 import org.junit.Assert;
 import org.junit.Test;

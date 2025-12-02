@@ -1,4 +1,4 @@
-package com.dominic.studentperformanceapp.domain.student;
+package com.dominic.studentperformanceapp.dto.student;
 
 import com.dominic.studentperformanceapp.enums.Subjects;
 import lombok.Data;
