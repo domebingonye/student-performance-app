@@ -15,15 +15,15 @@ import lombok.NoArgsConstructor;
 public class StudentDetails {
     @Schema(hidden = true)
     private Long id;
-    @NotBlank(message = "surname")
+    @NotBlank(message = "surname is required")
     private String surname;
-    @NotBlank(message = "firstName")
+    @NotBlank(message = "firstName is required")
     private String firstName;
     private String middleName;
-    @NotBlank(message = "Student class is required")
+    @NotBlank(message = "level class is required")
     private String level;
     private String regNo;
-    @NotBlank(message = "surname")
+    @NotBlank(message = "parentEmailAddress is required")
     @Email(message = "Invalid email format")
     private String parentEmailAddress;
 }
